@@ -35,12 +35,12 @@ let homeSentence /* ЗДЕСЬ ВАШ КОД */;
 let myObj = {};
 
 /*
- 4. Используя метод .slice, добавте в строки недостающие символы
+ 4. Используя метод .slice, добавте в недостающие символы в строку
  */
 
-let sliceString = 'Ytube';
+let sliceString = 'Ytube'; //
 
-console.log(sliceString);
+console.log(sliceString); // YouTube
 
 /*
  5. Преобразуйте строку x, в максимально удобно читаемый вид
