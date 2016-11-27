@@ -48,8 +48,8 @@ console.log(sliceString); // YouTube
 let frameworks = [2, 'Angular', 'Angular2', 'React/Redux'];
 let x = "google \
 released " + 'new version\
-' + frameworks[1] + Math.floor(frameworks[0]) + "\
-But real speed is" + `${frameworks[frameworks.length - 1]}`;
+ ' + frameworks[1] + Math.floor(frameworks[0]) + "\
+But real speed is " + `${frameworks[frameworks.length - 1]}`;
 
 
 
