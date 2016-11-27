@@ -45,7 +45,7 @@ console.log(sliceString); // YouTube
 /*
  5. Преобразуйте строку x, в максимально удобно читаемый вид
  */
-let frameworks = [2.3, 'Angular', 'Angular2', 'React/Redux'];
+let frameworks = [2, 'Angular', 'Angular2', 'React/Redux'];
 let x = "google \
 released " + 'new version\
 ' + frameworks[1] + Math.floor(frameworks[0]) + "\
