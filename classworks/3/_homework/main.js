@@ -41,6 +41,35 @@ console.log(simpleObjectGenerator('protocol', { url: '22' }, 8000));
    argument3:8000
 }*/
 
+///////////////////////////////////////////////
+/*
+2. Напишите функцию которая принимает 3 аргумента, третий аргумент - это объект.
+    
+    Функция создает объект где ключ это первый аргумент и значение - второй аргумент
+    и добавляет свойство "name" из объекта
+    и возвращает данный новый объект 
+*/
+
+var myName = { name: 'Oleg' };
+
+function addNameToUser(newProperty, newValue, oldObject) {
+    let asd = oldObject;
+    asd[newProperty] = newValue;
+    return asd
+}
+
+console.log(userWithFamily('family', '%Lustenko%', myName));
+/*
+{name:'Oleg', family:'%Lustenko%'}
+*/
+console.log(myName);
+/*
+{name:'Oleg'}
+*/
+
+/////////////////////////////////
+
+
 var userNames = [{ name: 'Egor' }, { name: 'Katya' }, { name: 'Vera' }];
 
 console.log(simpleObjectGenerator(77, userNames, 'privet kak dela chto novogo'.toUpperCase()));
