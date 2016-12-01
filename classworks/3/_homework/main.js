@@ -70,7 +70,7 @@ function addNameToUser(){
     
 }
 
-console.log(userWithFamily('family', '%Lustenko%', myName));
+console.log(addNameToUser('family', '%Lustenko%', myName));
 /*
 {name:'Oleg', family:'%Lustenko%'}
 */
