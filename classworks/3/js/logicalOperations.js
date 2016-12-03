@@ -98,19 +98,8 @@
 let number1 = +prompt('Введите первое число');
 let number2 = +prompt('Введите второе число');
 
-if ( !isNaN(number1) ) {
-  if ( !isNaN(number2) ) {
-    alert(number1 + number2);
-  } else {
-    alert('Вы ввели не число')
-  }
+if (!isNaN(number1) && !isNaN(number2)) {
+  alert(number1 + number2)
 } else {
   alert('Вы ввели не число')
 }
-
-
-
-
-
-
-
