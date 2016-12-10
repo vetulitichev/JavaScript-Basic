@@ -323,8 +323,11 @@ let megaObject = {
 };
 
 
-// Если функция получает массив, тогда отобразите все имена в массиве, если объект, тогда просто имя
-function showInConsole() {
+// Если функция получает массив, тогда отобразите все имена в массиве,
+// если объект, тогда просто имя
+function showInConsole(data) {
+  // 1. Какой тип у аргумента
+  //
   
 }
 
@@ -343,10 +346,6 @@ function addNewIndex() {
 function createHashTags() {
   
 }
-
-
-
-
 
 
 createHashTags(listOfCompanys);
