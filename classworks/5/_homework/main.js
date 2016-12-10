@@ -116,10 +116,9 @@ function minimalNumber(arr) {
  example:
  [1,3,5,9] => 7
  [0,8,16,32] => 24
+
  [0,16,24,32] => 8
- 
- [4,6,8,10] => 2
- 
+  
  */
 
 let test = [[], { html: 'css' }, 'hello', { hello: 'world' }];
