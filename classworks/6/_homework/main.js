@@ -324,11 +324,11 @@ let megaObject = {
 };
 
 /*
-*
-* TASK 1
-* Посчитайте количество букв а, в передаваемом параметре
-*
-* */
+ *
+ * TASK 1
+ * Посчитайте количество букв а, в передаваемом параметре
+ *
+ * */
 
 let randomString = 'aaa b a w c ';
 
@@ -344,8 +344,8 @@ function countLetterA() {
   
 }
 
-console.log(countLetterA(randomString)); // 4
-console.log(countLetterA(user.name + javaScript.html)); // 3
+//console.log(countLetterA(randomString)); // 4
+//console.log(countLetterA(user.name + javaScript.html)); // 3
 
 /*
  *
@@ -360,26 +360,26 @@ function reverseEachWord() {
   
 }
 
-console.log(reverseEachWord('You don\'t have to do anything special to begin using the DOM. Different browsers have different implementations of the DOM'));
+//console.log(reverseEachWord('You don\'t have to do anything special to begin using the DOM. Different browsers have different implementations of the DOM'));
 // uoY t'nod evah ot od gnihtyna laiceps ot nigeb gnisu eht .MOD tnereffiD sresworb evah tnereffid snoitatnemelpmi fo eht MOD
 
 
-console.log(reverseEachWord('The Document Object Model (DOM) is a programming interface for HTML and XML documents'));
+//console.log(reverseEachWord('The Document Object Model (DOM) is a programming interface for HTML and XML documents'));
 // ehT tnemucoD tcejbO ledoM )MOD( si a gnimmargorp ecafretni rof LMTH dna LMX stnemucod
 
 
 /* TASK 3
-* Добавьте в функцию reverseEachWord второй параметр,
-* данный параметр булево, если true - тогда слова так же переворачиваются в обратном порядке
-* */
+ * Добавьте в функцию reverseEachWord второй параметр,
+ * данный параметр булево, если true - тогда слова так же переворачиваются в обратном порядке
+ * */
 
 
-console.log(reverseEachWord('You don\'t have to do anything special to begin using the DOM. Different browsers have different implementations of the DOM', true));
+//console.log(reverseEachWord('You don\'t have to do anything special to begin using the DOM. Different browsers have different implementations of the DOM', true));
 //MOD eht fo snoitatnemelpmi tnereffid evah sresworb tnereffiD .MOD eht gnisu nigeb ot laiceps gnihtyna od ot evah t'nod uoY
-console.log(reverseEachWord('The Document Object Model (DOM) is a programming interface for HTML and XML documents', true));
+//console.log(reverseEachWord('The Document Object Model (DOM) is a programming interface for HTML and XML documents', true));
 // stnemucod LMX dna LMTH rof ecafretni gnimmargorp a si )MOD( ledoM tcejbO tnemucoD ehT
 
-console.log(reverseEachWord('Hi my Name is', false));
+//console.log(reverseEachWord('Hi my Name is', false));
 // iH ym emaN si
 
 
@@ -389,33 +389,46 @@ console.log(reverseEachWord('Hi my Name is', false));
  * а значение это количество повторений
  * */
 
+//Both - Java - and - Java - Script - is - programming - and - programming - OOPBased
+
 function wordCounter(sentence) {
   
+  let obj = {};
+  sentence.split(' ').forEach(function(element) {
+    if ( obj[element] ) {
+      obj[element] += 1
+    } else {
+      obj[element] = 1;
+    }
+  })
+  
+  
+  return obj;
 }
 
 console.log(wordCounter('Both Java and Java Script is programming and programming OOPBased Language'));
 /*
  {
-   Both:1,
-   Java:2,
-   and:2,
-   Script: 1,
-   is: 1
-   programming: 2
-   OOPBased:1,
-   Language:1
+ Both:1,
+ Java:2,
+ and:2,
+ Script: 1,
+ is: 1
+ programming: 2
+ OOPBased:1,
+ Language:1
  }
  */
 
-console.log(wordCounter('asd qwe asd'));
+//console.log(wordCounter('asd qwe asd'));
 /*
  {
-  asd:2
-  qwe:1
+ asd:2
+ qwe:1
  }
-* */
+ * */
 
-console.log(wordCounter('url http url www url http'));
+//console.log(wordCounter('url http url www url http'));
 
 /*
  {
@@ -427,17 +440,33 @@ console.log(wordCounter('url http url www url http'));
 
 
 /*
-* TASK 4
+ * TASK 4
+ 
+ // Функция принимает массив у которого есть свойста _id и Company.
+ // верните объект, у которого ключ это _id, а значение Company
+ 
+ */
 
-// Функция принимает массив у которого есть свойста _id и Company.
-// верните объект, у которого ключ это _id, а значение Company
-*/
-
-function createHashTags() {
+function createHashTags(arr) {
   
+  return arr.reduce(function(myObj, element, index, arr) {
+    let { _id, company } = element;
+    myObj[_id] = company;
+    //myObj += '     -    ' + company;
+    return myObj;
+  }, {});
+  
+  let myObj = {};
+  arr.forEach(function(element) {
+    //let { _id, company } = element;
+    let _id = element._id;
+    let company = element.company;
+    myObj[_id] = company;
+  });
+  return myObj;
 }
 
-createHashTags(listOfCompanys);
+//console.log(createHashTags(listOfCompanys));
 //{"584babb6eeb4137cf14c37a3":"ASIMILINE", 584babb6eeb4137cf14c37a3:'Company2', }
 
 // @ SUPER
@@ -449,27 +478,29 @@ createHashTags(listOfCompanys);
  *
  * */
 
-function uniqueElements(arr) {
-  
-}
-
-let notUniqArray = [1, 1, 2, 2, 2, 5, 10, 25, 30, 5, 1, 0, 22, 3, 10, 3];
-
-console.log(uniqueElements(notUniqArray)); //1,2,5,10,25,30,0,22,3,
-console.log(uniqueElements([1,1,2,3])); // 1,2,3
+//function uniqueElements(arr) {
+//  //ES2015
+//  return arr.filter(function(element, index) {
+//    return arr.indexOf(element) == index;
+//  })
+//}
+//
+//let notUniqArray = [1, 1, 2, 2, 2, 5, 10, 25, 30, 5, 1, 0, 22, 3, 10, 3];
+//
+//console.log(uniqueElements(notUniqArray)); //1,2,5,10,25,30,0,22,3,
+//console.log(uniqueElements([1, 1, 2, 3])); // 1,2,3
 
 /*
  *
  * TASK 2
  * Отсортируйте массив с такой же последовательностью как идут цифры
  *
- *
  */
 
-function solution(arr) {
-  
-}
-
-console.log(solution([2,3,2,2,1,5,10,25,5,10,17,1])); // 2,2,2,3,1,1,5,5,10,10,25,17
-console.log(solution([5,3,5,3,1,7,5,3,7,2,5])); // 5,5,5,5,3,3,3,1,7,7,2
+//function solution(arr) {
+//  return arr.slice().filter((a, b, c) => c.indexOf(a) == b).map((a, b, c) => arr.filter(z => z == a) ? arr.filter(z => z == a) : '').reduce((a, b) => (a.concat(...b)), [])
+//}
+//
+//console.log(solution([2, 3, 2, 2, 1, 5, 10, 25, 5, 10, 17, 1])); // 2,2,2,3,1,1,5,5,10,10,25,17
+//console.log(solution([5, 3, 5, 3, 1, 7, 5, 3, 7, 2, 5])); // 5,5,5,5,3,3,3,1,7,7,2
 
