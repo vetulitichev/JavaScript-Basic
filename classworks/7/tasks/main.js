@@ -1,17 +1,17 @@
-//'use strict';
+'use strict';
 
-//var a = 2;
-//foo();
-//
-//function foo() {
-//  a = 3;
-//
-//  console.log(a);
-//
-//  var a;
-//}
-//
-//console.log(a);
+var a = 2;
+foo();
+
+function foo() {
+  a = 3;
+
+  console.log(a);
+
+  var a;
+}
+
+console.log(a);
 
 
 
@@ -34,12 +34,12 @@
 //foo();
 
 
-function foo() {
-  a = 1;
-}
-
-foo();
-console.log(a);
+//function foo() {
+//  a = 1;
+//}
+//
+//foo();
+//console.log(a);
 
 
 // Для примитивных типов
