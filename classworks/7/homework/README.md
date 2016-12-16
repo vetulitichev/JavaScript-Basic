@@ -12,7 +12,7 @@
 + http://learn.javascript.ru/task/sum-to (3-ий вариант)
 
 
-# [Замыкания ч. 2](http://learn.javascript.ru/closures-usage)
+# [Замыкания ч.2](http://learn.javascript.ru/closures-usage)
 
 Задачи:
 + http://learn.javascript.ru/task/closure-sum
