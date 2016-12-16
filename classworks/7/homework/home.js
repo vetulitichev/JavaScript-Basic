@@ -74,7 +74,7 @@ jun.logger(5, 5); //ERROR ! add more methods
 
 // @SUPER - PUPER,
 /*
- * Добавьте функции methodCounter, возможность добавлять счетчик вызовов
+ * Добавьте функции methodCounter, возможность увеличивать счетчик на заданное число
  * */
 
 
