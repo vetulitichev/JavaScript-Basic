@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 /*
  *
  * TASK 2
@@ -30,7 +28,7 @@ function add() {
  *
  * */
 
-function solution3() {
+function patternModule() {
  
 }
 
@@ -62,11 +60,11 @@ let jun = {};
 
 
 function methodCounter(obj, name, num, fn) {
-
+   
 }
 
-methodCounter(jun, 'logger', 2, function() {
-  
+methodCounter(jun, 'logger', 2, function(num, args) {
+
 });
 
 jun.logger(1, 2, 3, 4); //2, 10
