@@ -1,5 +1,5 @@
 'use strict';
-// Простое замыкание
+ //Простое замыкание
 //let outerValue = 'ninja';
 //
 //function outerFunction() {
@@ -7,6 +7,14 @@
 //}
 //
 //outerFunction();
+
+
+
+
+
+
+
+
 
 
 
@@ -27,20 +35,20 @@ let HighOrderFunction = closure();
 // Написать функцию высшего порядка которая прибавляет
 // к переданному параметру добавляет 10
 
-function addTEN(randomNumber) {
-  let innerNumber = 10;
-  
-  var innerFunction = function(number) {
-    console.log(number + randomNumber);
-    return number + randomNumber;
-  };
-  
-  return innerFunction
-}
-
-let plusTen = addTEN(1000000);
-
-let x = plusTen(25); // 35
+//function addTEN(randomNumber) {
+//  let innerNumber = 10;
+//
+//  var innerFunction = function(number) {
+//    console.log(number + randomNumber);
+//    return number + randomNumber;
+//  };
+//
+//  return innerFunction
+//}
+//
+//let plusTen = addTEN(1000000);
+//
+//let x = plusTen(25); // 35
 let y = plusTen(100); // 110
 
 

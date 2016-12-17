@@ -1,5 +1,22 @@
 'use strict';
 
+
+function makeCounter() {
+  let num = 0;
+  return function() {
+    console.log(num++);
+  }
+}
+
+let counter = makeCounter();
+
+counter();
+counter();
+counter();
+counter();
+counter();
+
+
 /*
  *
  * TASK 2
@@ -9,9 +26,18 @@
  *
  * */
 
-function add() {
-  
-}
+//function add(x) {
+//  return function(y) {
+//    return function(z) {
+//      return x+y+z;
+//    }
+//  };
+//}
+
+//console.log(add);
+//console.log(add());
+//console.log(add()());
+//console.log(add()[1]);
 
 //console.log(add(1)(2)(3)); // 6
 //console.log(add(10)(5)(15)); // 30
@@ -28,11 +54,19 @@ function add() {
  *
  * */
 
-function patternModule() {
- 
-}
-
-//let test = solution3(''); // 0
+//function patternModule() {
+//  let num = 1;
+//  return {
+//    method: function() {
+//      console.log(num++)
+//    },
+//    clear: function() {
+//      num = 0;
+//    }
+//  }
+//}
+////
+//let test = patternModule(); // 0
 //test.method(); //1
 //test.method(); //2
 //test.method(); //3
@@ -55,21 +89,28 @@ function patternModule() {
  * */
 
 
-
-let jun = {};
-
-
-function methodCounter(obj, name, num, fn) {
-   
-}
-
-methodCounter(jun, 'logger', 2, function(num, args) {
-
-});
-
-jun.logger(1, 2, 3, 4); //2, 10
-jun.logger(5, 5, 5, 5); //1, 20
-jun.logger(5, 5); //ERROR ! add more methods
+//let jun = {};
+////
+//////
+//function methodCounter(obj, name, num, fn) {
+//  let innerNum = num;
+//
+//  obj[name] = function(...args){
+//    fn(args);
+//  }
+//}
+//
+//methodCounter(jun, 'logger', 2, function(args) {
+//  let sum = args.reduce(function(a, b) {
+//    return a + b
+//  }, 0);
+//  console.log(sum);
+//});
+//
+//
+//jun.logger(1, 2, 3, 4); //2, 10
+//jun.logger(5, 5, 5, 5); //1, 20
+//jun.logger(5, 5); //ERROR ! add more methods
 
 
 // @SUPER - PUPER,

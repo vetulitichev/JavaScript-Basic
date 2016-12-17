@@ -12,6 +12,9 @@ if ( '123' != 1 + '23' ) {
   console.log('Или это число ?')
 }
 
+
+
+
 if ( null == undefined ) {
   console.log('В чем правда брат ?')
 } else if ( null === undefined ) {
@@ -19,6 +22,8 @@ if ( null == undefined ) {
 } else {
   console.log("где я ?")
 }
+
+
 
 if ( !0 == true ) {
   console.log('dada privet!');
