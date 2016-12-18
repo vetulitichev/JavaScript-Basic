@@ -1,0 +1,24 @@
+{
+  "name": "JavaScript-Basic",
+  "version": "1.0.0",
+  "description": "- Данный репозиторий содержит классные и домашние работы  - И материалы для домашних заданий",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku": "git subtree push --prefix=tests heroku master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OlegLustenko/JavaScript-Basic.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OlegLustenko/JavaScript-Basic/issues"
+  },
+  "homepage": "https://github.com/OlegLustenko/JavaScript-Basic#readme"
+}
