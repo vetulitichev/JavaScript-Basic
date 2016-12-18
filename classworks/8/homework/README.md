@@ -1,3 +1,5 @@
+## [switch-case](https://learn.javascript.ru/switch)
+
 ## [Объекты](https://learn.javascript.ru/object-for-in)
 
 # [Замыкания](https://learn.javascript.ru/closures-usage)
