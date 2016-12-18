@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/OlegLustenko/JavaScript-Basic/issues"
   },
-  "homepage": "https://github.com/OlegLustenko/JavaScript-Basic#readme"
+  "homepage": "https://github.com/OlegLustenko/JavaScript-Basic#readme",
+  "dependencies": {
+    "socket.io": "^1.7.2"
+  }
 }
