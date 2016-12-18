@@ -1,5 +1,6 @@
 'use strict';
 let fs = require('fs');
+const port = process.env.PORT || 3000;
 const server = require('http').createServer((req, res) => {
   fs.readFile('index.html', {}, (err, file) => {
     res.end(file);
@@ -19,4 +20,4 @@ io.on('connection', function(client) {
 //  res.body = 'hi'
 //});
 console.log('updated');
-server.listen(3000);
+server.listen(port);
