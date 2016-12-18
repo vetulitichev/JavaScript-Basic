@@ -5,9 +5,13 @@
   "main": "chat.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node chat.js"
+    "start": "node chat.js",
+    "heroku": "git subtree push --prefix=tests heroku master"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "^1.7.2"
+  }
 }
