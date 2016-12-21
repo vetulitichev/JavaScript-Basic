@@ -3,7 +3,7 @@ let fs = require('fs');
 const port = process.env.PORT || 3000;
 const server = require('http').createServer((req, res) => {
   fs.readFile('index.html', {}, (err, file) => {
-    res.end(file);
+    res.end(file + '+1'.toString('binary'));
   });
   res.status = 404;
 });

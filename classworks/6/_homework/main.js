@@ -391,20 +391,21 @@ function reverseEachWord() {
 
 //Both - Java - and - Java - Script - is - programming - and - programming - OOPBased
 
-function wordCounter(sentence) {
-  
-  let obj = {};
-  sentence.split(' ').forEach(function(element) {
-    if ( obj[element] ) {
-      obj[element] += 1
-    } else {
-      obj[element] = 1;
-    }
-  })
-  
-  
-  return obj;
-}
+//function wordCounter(sentence) {
+//
+//  let obj = {};
+//  sentence.split(' ').forEach(function(element) {
+//    if ( obj[element] ) {
+//      obj[element] += 1
+//    } else {
+//      obj[element] = 1;
+//    }
+//  })
+//
+//  return obj;
+//}
+
+let wordCounter = (sentence) =>
 
 console.log(wordCounter('Both Java and Java Script is programming and programming OOPBased Language'));
 /*
