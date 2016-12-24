@@ -1,16 +1,16 @@
 const store = {};
-store.sell = function(book) {};
-
-store.add = function(goods) {};
-
+store.job = function(job) {
+  this.makeJob(store[job], store);
+};
+store.sell = function(book) {
+  if ( store.books.indexOf(book) !== '-1' ) {
+    let indexBook = this.books.indexOf(book);
+    let selledBook = this.books.splice(indexBook, 1);
+    return selledBook.price + selledBook.price;
+  }
+};
+store.countBooks = function(goods) {};
 store.giveSalary = function() {};
-
-store.employees = [
-  { name: "Vera", salary: 500 },
-  { name: "Jack", salary: 200 },
-  { name: "John", salary: 2500 }
-];
-
 store.books = [
   { name: 'Harry Potter', pages: 510, price: '15$' },
   { name: 'Eloquent JavaScript', pages: 300, price: '20$' },
@@ -24,3 +24,48 @@ store.stock = [
   { name: 'Happy birthday', pages: 1, price: '30$' },
   { name: 'Box', id: 1, items: ['pens', 'pencils', 'sticks'], price: '1$' }
 ];
+
+let Vera = {
+  name: "Vera",
+  salary: 500,
+  makeJob(fn, company) {
+    console.log(fn);
+    fn(company);
+  },
+  cleaning_skill() {
+    console.log('Я занята уборкой');
+    return this;
+  }
+};
+
+store.job.call(Vera, 'sell');
+
+let Jack = {
+  name: "Jack",
+  salary: 200,
+  makeJob(fn) {
+    fn()
+  },
+  sellOneBook_skill(book) {
+    const SELLBONUS = 0.1;
+    if ( this.books.indexOf(book) !== '-1' ) {
+      let indexBook = this.books.indexOf(book);
+      let selledBook = this.books.splice(indexBook, 1);
+      return selledBook.price + selledBook.price * SELLBONUS;
+    }
+  }
+};
+
+let John = {
+  name: "John",
+  salary: 2500,
+  makeJob(fn) {
+    fn()
+  },
+  theBoss(employee, task) {
+    return function() {
+      return this[task].apply(employee, arguments)
+    }
+  }
+};
+

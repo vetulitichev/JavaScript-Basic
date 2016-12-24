@@ -1,3 +1,0 @@
-const STORE_2 = {
-  
-}
