@@ -41,7 +41,7 @@ console.log(createDIV); //<div></div>
  *
  * Создайте объект к которому можно будет применить любое число вызовов
  * *
- *  Передаваемое значение должно возвращаться в виде html тэгов (TASK 2)
+ *  Передаваемое значение должно возвращаться в виде html тэгов (TASK 1)
  *  Передаваемые аргументы должны быть только в виде строки
  
  ezjQuery.add('body')
@@ -61,19 +61,22 @@ console.log(createDIV); //<div></div>
 //};
 
 let ezjQuery = {
-  state:[],
+  state: [],
   createTag() {
   
   },
-  new(args) {
-   this.state
+  add(tag, param) {
+  
+  },
+  logState() {
+  
   }
 };
 
-ezjQuery.new('body') // <body></body>  * в консоле
-        .new('div') //<body></body><div></div>
-        .new('hello') //<body></body><div></div><hello></hello>
-        .new('li'); //<body></body><div></div><li></li>
+ezjQuery.add('body') // <body></body>  * в консоле
+        .add('div') //<body></body><div></div>
+        .add('hello') //<body></body><div></div><hello></hello>
+        .add('li'); //<body></body><div></div><li></li>
 
 
 /*
