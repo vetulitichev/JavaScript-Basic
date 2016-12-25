@@ -25,14 +25,14 @@ z(x);
  *
  * */
 
-let $ = function() {
-
-};
-
-let createBODY = $('body');
-let createDIV = $('div');
-console.log(createBODY); //<body></body>
-console.log(createDIV); //<div></div>
+//let $ = function() {
+//
+//};
+//
+//let createBODY = $('body');
+//let createDIV = $('div');
+//console.log(createBODY); //<body></body>
+//console.log(createDIV); //<div></div>
 
 
 /*
@@ -52,27 +52,13 @@ console.log(createDIV); //<div></div>
  *
  * */
 
-//let ezJquery = function() {
-//
-//
-//  return {
-//
-//  }
-//};
 
-let ezjQuery = {
-  
-  add(tag, param) {
-  
-  },
-  
-};
 
-ezjQuery.add('body') // <body></body>  * в консоле
-        .add('div') //<body></body><div></div>
-        .add('hello') //<body></body><div></div><hello></hello>
-        .add('li'); //<body></body><div></div><li></li>
-
+let xxx = $('body') // <body></body>  * в консоле
+    .add('div') //<body></body><div></div>
+    .add('hello') //<body></body><div></div><hello></hello>
+    .add('li', 'dadada') //<body></body><div></div><li></li>
+    .render();
 
 /*
  *
@@ -105,6 +91,7 @@ ezjQuery.add('body') // <body></body>  * в консоле
 // @SUPER
 /*
  * Переименуйте объект ezjQuery в $. Создание перевого метода должено быть без метода
+ *
  * $('body').add('li', 'hi').render() // <body><li>hi</li></body>
  *
  *
