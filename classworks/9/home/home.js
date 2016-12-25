@@ -2,34 +2,98 @@
 
 // TASK 1
 // Отобразите достаточно ли developers навыков ?
-// Отобразите всех разработчиков и вызовете у каждого разработчика метод goodDev
+// Отобразите всех разработчиков и вызовете у каждого
+// разработчика метод goodDev
 /*
  Количество требований к разработчику совпадает с его навыками.
  
  * Используйте в задаче this
  * */
 
+//let developer1 = {
+//  skills: ['JavaScript', 'linux', 'html', 'OOP', 'Node.js'],
+//  requires: ['Node.js', 'JavaScript', 'OOP'],
+//  goodDev
+//};
+//
+//let developer2 = {
+//  experience: [{ technology: 'java' }, { technology: 'c++' },
+//    { technology: 'aws' }, { technology: 'docker' }],
+//  requires: ['java', 'json', 'c++', 'JavaScript'],
+//  goodDev
+//};
+//
+//let developers = [developer1, developer2];
+//
+//
+//function goodDev(argument1, argument2) {
+//
+//}
+
+
 let developer1 = {
   skills: ['JavaScript', 'linux', 'html', 'OOP', 'Node.js'],
   requires: ['Node.js', 'JavaScript', 'OOP'],
+  getSkills,
   goodDev
 };
-
 let developer2 = {
   experience: [{ technology: 'java' }, { technology: 'c++' },
     { technology: 'aws' }, { technology: 'docker' }],
   requires: ['java', 'json', 'c++', 'JavaScript'],
+  getSkills,
   goodDev
 };
 
-let developers = [developer1, developer2];
-
-
-function goodDev(argument1, argument2) {
-  
+function getSkills(skillName = 'skills') {
+  let arr = [];
+  if ( !this[skillName] ) {
+    skillName = 'experience';
+  }
+  //console.log(this[skillName]);
+  this[skillName].forEach(function(item, i) {
+    if ( skillName != 'skills' ) {
+      arr[i] = item.technology;
+    } else {
+      arr[i] = item;
+    }
+  });
+  //console.log(arr);
+  return arr;
 }
 
-developers.forEach(dev => dev.goodDev());
+
+//function find(arr, item) {
+//   // arr = ['JavaScript', 'linux', 'html', 'OOP', 'Node.js'];
+//  // item = 'Node.js'
+//    for (let i =0; i < arr.length; i++){
+//        if(arr[i] == item){
+//            return true;
+//        }
+//    }
+//    return false;
+//}
+
+function goodDev(dev) {
+  let skill = this.getSkills();
+  //console.log(skill);
+  this.requires.forEach(function(item, i) {
+    if ( skill.indexOf(item) != -1 ) {
+      console.log(`${item} ... success`)
+    } else {
+      console.log(`${item} ... fail`);
+    }
+  })
+  
+}
+//developer1.goodDev();
+//developer2.goodDev();
+
+//let developers = [developer1, developer2];
+//developers.forEach((dev, index) => {
+//  console.log(`developer ${index + 1}`);
+//  dev.goodDev();
+//});
 // developer 1
 // required: Node.js ... success
 // required: JavaScript ... success
@@ -46,24 +110,40 @@ developers.forEach(dev => dev.goodDev());
  *
  * TASK 2
  *
- * Создайте объект содержащий коллекцию элементов с одинаковыми свойстами и разными значениями!
+ * Создайте объект содержащий коллекцию элементов с одинаковыми
+ * свойстами и разными значениями!
  * Создайте функция которая сортирует объект по заданному свойству
  * При вызове функции используйте this
  *
  *
  * */
 
+let myObject = {
+  database: [
+    { age: 100, name: 'b' },
+    { age: 15, name: 'c' },
+    { age: 25, name: 'a' }
+  ],
+  myFilter(filterName) {
+    return this.database.sort((a, b) => {
+      //console.log(a[filterName] > b[filterName]);
+      return a[filterName] > b[filterName]
+    })
+  }
+};
+
 //{age:10, name:'b'}, {age:15, name:'c'} {age:25, name:'A'}
 
-myObject.myFilter('age');
-myObject.myFilter('name');
+console.log(myObject.myFilter('age'));
+console.log(myObject.myFilter('name'));
+//myObject.myFilter('name');
 
 
 /*
  *
  * TASK 3
  *
- * Ваши приложения!
+ * Ваши приложения !
  * Ваше направление деятельности
  *
  * */
@@ -93,7 +173,7 @@ let junior = {};
 // fn.length == arguments.length
 
 function addMethod(object, name, fn) {
- 
+
 }
 
 
