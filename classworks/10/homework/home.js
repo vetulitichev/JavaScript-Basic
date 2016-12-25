@@ -61,16 +61,11 @@ console.log(createDIV); //<div></div>
 //};
 
 let ezjQuery = {
-  state: [],
-  createTag() {
   
-  },
   add(tag, param) {
   
   },
-  logState() {
   
-  }
 };
 
 ezjQuery.add('body') // <body></body>  * в консоле
