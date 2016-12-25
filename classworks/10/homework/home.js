@@ -89,7 +89,7 @@ ezjQuery.new('body') // <body></body>  * в консоле
 
 
 // Для выполнивших все задания
-// сделайте document.write(bodyDiv) увидите результат :)
+// сделайте document.write(helloList) увидите результат :)
 
 // @SUPER
 /*
