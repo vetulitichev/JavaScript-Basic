@@ -75,7 +75,7 @@ let xxx = ezjQuery.add('body') // <body></body>  * в консоле
  .add('li', 'Hello'); //<body><div><ul><li>Hello</li></ul></div></body>
  .render()
  console.log(helloList) // <body><div><ul><li>Hello</li></ul></div></body>
- Обратите внимание, что при создании следующей переменной создание строки началось сначала
+ Обратите внимание, что после вызова render создание строки началось сначала
  
  var bodyDiv = ezjQuery.add('body') //<body></body>
  .add('div') //<body><div></div></body>
