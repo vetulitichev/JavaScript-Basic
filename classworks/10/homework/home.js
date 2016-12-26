@@ -58,7 +58,7 @@ let xxx = ezjQuery.add('body') // <body></body>  * в консоле
     .add('div') //<body></body><div></div>
     .add('hello') //<body></body><div></div><hello></hello>
     .add('li', 'dadada') //<body></body><div></div><li></li>
-    .render();
+
 
 /*
  *
