@@ -10,10 +10,12 @@
 
 let y = 5;
 let x = () => y;
+
 let z = (t) => {
-  let y = 10;
-  return t();
+  let y = 5;
+  t();
 };
+console.log(y);
 
 z(x);
 
@@ -51,7 +53,6 @@ z(x);
  *
  *
  * */
-
 
 
 let xxx = $('body') // <body></body>  * в консоле
