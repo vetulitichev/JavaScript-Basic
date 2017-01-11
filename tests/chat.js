@@ -2,19 +2,20 @@
 let fs = require('fs');
 const port = process.env.PORT || 3000;
 const server = require('http').createServer((req, res) => {
+  console.log('------------', req);
   fs.readFile('index.html', {}, (err, file) => {
     res.end(file + '+1'.toString('binary'));
   });
   res.status = 404;
 });
-const io = require('socket.io')(server);
-io.on('connection', function(client) {
-  
-  console.log('a user connected');
-  
-  client.on('event', function(data) {});
-  client.on('disconnect', function() {});
-});
+//const io = require('socket.io')(server);
+//io.on('connection', function(client) {
+//
+//  console.log('a user connected');
+//
+//  client.on('event', function(data) {});
+//  client.on('disconnect', function() {});
+//});
 
 //server.on((req, res) => {
 //  res.body = 'hi'
