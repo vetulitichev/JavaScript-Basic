@@ -1,4 +1,4 @@
-'use strict';
+//'use strict';
 
 /*
  *
@@ -31,7 +31,41 @@
  *
  * */
 
-const server = new Http().createServer().listen(3000, 'localhost');
+
+function Http() {}
+
+Http.prototype.createServer = function(fn) {
+  this.callback = fn;
+  return this;
+};
+
+Http.prototype.listen = function(PORT, host) {
+  let ctx = {
+    req: {
+      port: 3000,
+      url: '/www.yandex.ua/'
+    },
+    res: {
+      status: 200,
+      message: 'ok',
+      header: {
+        contentType: 'application/json'
+      }
+    }
+  };
+  
+  console.log('Server running...');
+  
+  
+  this.callback(ctx, function() { })
+  
+  
+};
+
+
+const server = new Http().createServer(function(ctx, next) {
+  console.log(ctx);
+}).listen(3000, 'localhost');
 
 // TASK 1
 //Создать класс Human, у которого будут свойства обычного человека: имя, возраст, пол, рост, вес.
@@ -42,16 +76,40 @@ const server = new Http().createServer().listen(3000, 'localhost');
 // Убедиться что они имеют поля родительского класса Human
 
 
-
 // @SUPER
 
 /*
-* TASK 0
-* Создайте функцию обертку над другой функцией
-* Каждый раз при вызове внутренней функции в консоле будут отображаться аргументы функции
-* которую мы обернули
-*
-* */
+ * TASK 0
+ * Создайте функцию обертку над другой функцией
+ * Каждый раз при вызове внутренней функции в консоле будут отображаться аргументы функции
+ * которую мы обернули
+ 
+ * */
+
+/*
+ *
+ * Функция обертка - принимает 1 параметр другую функцию. И возвращает новую функцию... которая вызывает
+ * переданную функцию
+ *
+ * */
+
+//функциюfunction add(a, b) {
+//  return a + b;
+//}
+//
+//function wrap(fn) {
+//  return function() {
+//    console.log(arguments);
+//    return fn.apply(this, arguments);
+//  }
+//}
+//
+//let newLog = wrap(add);
+//
+//console.log(newLog(1, 2));
+
+
+
 
 
 
