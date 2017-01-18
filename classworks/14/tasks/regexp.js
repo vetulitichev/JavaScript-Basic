@@ -1,6 +1,8 @@
 var str1 = 'JavaScript is rule';
 var str2 = 'PHP is cool';
-var str3 = 'JavaScript is is is is rule';
+var str3 ='JavaScript is is is is rule';
+
+
 
 const checkIfRule = (str) => {
     console.log(/rule/.test(str) ? 'cool' : 'PHP');
@@ -20,6 +22,13 @@ const removeIs = (str) => {
 
 console.log(removeIs(str3)) // JavaScript is rule
 
+
+// ^
+// & (and)
+// $
+// \
+// / 
+// *
 
 
 

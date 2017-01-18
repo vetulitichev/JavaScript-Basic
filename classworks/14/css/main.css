@@ -1,0 +1,12 @@
+h1,
+h3 {
+  color: red;
+}
+
+h2 {
+  color: blue;
+}
+
+.headers {
+  border: 2px solid red;
+}

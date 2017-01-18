@@ -32,7 +32,7 @@ console.log(vasya instanceof Person);
 */
 
 
-(function() {
+// (function() {
 
 
 
@@ -40,4 +40,21 @@ console.log(vasya instanceof Person);
 
 
 
-})();
+// })();
+
+const div = document.createElement('div');
+div.textContent = 'Hello world'
+const body = document.body;
+const button = document.createElement('button');
+button.textContent = 'Update';
+
+button.onclick = () => {
+  if (div.textContent === 'Hello world') {
+    div.textContent = 'Hello easycode students!'
+  } else {
+    div.textContent = 'Hello world'
+  }
+}
+
+body.appendChild(div);
+body.appendChild(button);
