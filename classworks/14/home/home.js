@@ -9,17 +9,17 @@ TASK 0. Найдите числа которые повторяются нече
 
 */
 
-const someWebpackModule = `module.exports = {
-    context: %%HOMEDIR%,
-    entry: {
-        app: "%%HOMEDIR%%/%%APP_DIR%%/%%APPNAME%%.js"
-    },
-    output: {
-        path: %%HOMEDIR%% + '/app',
-        filename: "dist/[%%APPNAME%%].js",
-        library: '[%%APPNAME%%]'
-    }
-   }`;
+// const someWebpackModule = `module.exports = {
+//     context: %%HOMEDIR%,
+//     entry: {
+//         app: "%%HOMEDIR%%/%%APP_DIR%%/%%APPNAME%%.js"
+//     },
+//     output: {
+//         path: %%HOMEDIR%% + '/app',
+//         filename: "dist/[%%APPNAME%%].js",
+//         library: '[%%APPNAME%%]'
+//     }
+//    }`;
 
 /* TASK - 1
 Распарсите строку и замените 
@@ -34,13 +34,13 @@ const someWebpackModule = `module.exports = {
  *
  *
  * */
-const myRegExp = (str, homeDir, appDir, appName) => {}
+// const myRegExp = (str, homeDir, appDir, appName) => {}
 
-myRegExp(someWebpackModule, './JavaScript-Basic', 'fixtures/src', 'app.js')
+// myRegExp(someWebpackModule, './JavaScript-Basic', 'fixtures/src', 'app.js')
 
 
 /*
- TASK - 2 
+ TASK - 2
  Сделайте разметку как скриншоте используя HTML
  вам необходимо использовать тэги
 */
@@ -48,11 +48,12 @@ myRegExp(someWebpackModule, './JavaScript-Basic', 'fixtures/src', 'app.js')
 
 /* TASK 3
  JavaScript =>
-  Создать объект с методами, которые будут динамически генерировать DOM. 
-  Это будет тест, который мы будем разрабатывать в следующих заданиях. 
-  Сейчас вам нужно только динамически создать html, 
-  методы должны храниться в одном объекте. Для того чтоб страница выглядела красиво можете использовать Bootstrap 
-  и создавать DOM-элементы с готовыми бутстраповскими классами. 
+  Создать объект с методами, которые будут динамически генерировать DOM
+  Это будет тест, который мы будем разрабатывать в следующих заданиях.
+  Сейчас вам нужно только динамически создать html,
+  методы должны храниться в одном объекте. Для того чтоб страница выглядела
+  красиво можете использовать Bootstrap
+  и создавать DOM-элементы с готовыми бутстраповскими классами.
   Изначально на странице должен быть только <body>, вызывая методы объекта нужно создать dom-элементы
 
 */
