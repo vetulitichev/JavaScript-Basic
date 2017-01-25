@@ -8,9 +8,6 @@
 
 */
 
-const solution = arr => arr[0].map((_, index) => arr.map(r => r[index]));
-
-
 /*
 TASK 1
 
