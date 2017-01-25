@@ -9,9 +9,27 @@
 */
 
 /*
-TASK 1
+Визуализируйте массив, если в коллекции есть свойство children, тогда создайте вложенный лист
+name - свойство h1
+children ul->li
 
-
-
+Используйте innerHTML
 
 */
+
+const navigation = [
+  { name: 'Главная' },
+  {
+    name: 'Каталог',
+    children: [
+      { name: 'Компьютеры', children: [{ name: 'Ноутбуки' }, { name: 'Планшеты' }] }
+    ]
+  },
+  { name: 'Телефоны' }
+];
+
+const visualArray = (arr) => {
+
+}
+
+document.body.innerHTML = visualArray(navigation);
