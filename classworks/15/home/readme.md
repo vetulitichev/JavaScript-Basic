@@ -7,7 +7,7 @@
 
 ## Работа с документом dom.
 > Статья: 
-+ https://learn.javascript.ru/traversing-dom 
++ https://learn.javascript.ru/traversing-dom
 > Задачи:
 + https://learn.javascript.ru/task/dom-children 
 + https://learn.javascript.ru/task/navigation-links-which-null 
