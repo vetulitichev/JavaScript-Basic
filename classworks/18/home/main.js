@@ -12,8 +12,8 @@ solution(["Do, do, do, do... do it!"]) expected []
 
 
 /* TASK 1-2-3
-Нужно виртуализировать keypad.html -> keypad.js
-Нужно виртуализировать index.html -> app.js
+Нужно визуализировать keypad.html -> keypad.js
+Нужно визуализировать index.html -> app.js
 
 Структура виртуализации:
  - header - один блок
@@ -26,8 +26,9 @@ https://aleksandra-maslennikova.github.io/telephone-book/keypad.html
 
 */
 
+
 /*
 https://aleksandra-maslennikova.github.io/telephone-book/index.html
-По клику по заголовку таблицы, таблица сортировалась по свойству по соответствующему свойству
+По клику по заголовку таблицы, таблица сортировалась по соответствующему свойству
 
 */

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    div {
+      border: 25px solid black;
+      margin: 10px auto;
+      padding: 30px;
+    }
+    
+    .block {
+      width: 100px;
+      height: 150px;
+    }
+    
+    .height {
+      height: 300px;
+    }
+    
+    .red {
+      background-color: red;
+    }
+    
+    .yellow {
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <button>Event</button>
+  <h1>Hello world</h1>
+  <div class="width block red"></div>
+  <script>
+    const block = document.querySelector('div');
+
+    //1. Получить блок
+    //2. Получить ширину и высоту блока
+    setInterval(() => {
+      block.style.width = block.offsetWidth + 1 + 'px'
+      block.style.height = block.offsetHeight + 1 + 'px'
+    }, 500000)
+
+    document.querySelector('button').onclick = function(event) {
+      console.log(event);
+      console.group('client sizes')
+      console.log(event.clientX)
+      console.log(event.clientY)
+      console.log(event.currentTarget)
+      console.groupEnd();
+    }
+
+
+
+    //3. Отобразить в консоле ширину и высоту блока
+    // string + string 450px10px  => 460px
+    //4. Добавить к численному выражению ширины 10
+    //5. Добавить этому вычислению 'px'
+  </script>
+</body>
+
+</html>
