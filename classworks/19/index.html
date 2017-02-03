@@ -4,10 +4,43 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <style>
+    .block {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      border: 2px solid black;
+    }
+    
+    .block1 {
+      width: 300px;
+      height: 300px;
+    }
+    
+    .block2 {
+      width: 200px;
+      height: 200px;
+    }
+    
+    .block3 {
+      width: 100px;
+      height: 100px;
+    }
+  </style>
 </head>
 
 <body>
+  <div class="block block1" style="background:yellow">
+    <div class="block block2" style="background:blue">
+      <div class="block block3" style="background:green"></div>
+    </div>
+  </div>
+
+  <div class="info"></div>
   <script src="src/main.js"></script>
 </body>
+
+
 
 </html>
