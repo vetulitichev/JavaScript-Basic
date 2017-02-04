@@ -4,8 +4,8 @@ TASK 0
 Вам дано предложение, верните массив из слов, которые длинее чем средняя длина всех слов.
 Слова разделены пробелами, если в предложении запятые, они должны быть пропущены
 
-solution(["This is a sample string"]) expected ["This" "sample" "string"]    
-solution(["Some another sample"]) expected ["another" "sample"]    
+solution(["This is a sample string"]) expected ["This" "sample" "string"]
+solution(["Some another sample"]) expected ["another" "sample"]
 solution(["Do, do, do, do... do it!"]) expected []
 
 */
