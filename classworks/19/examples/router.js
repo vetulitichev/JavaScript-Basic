@@ -6,27 +6,31 @@ function eventHandler(event) {
   const link = event.target.getAttribute('href');
   const data = event.target.innerHTML;
   updateContent(data);
-  // history.pushState(data, link, event.target.href)
+  history.pushState(data, link, event.target.href);
 }
 console.log(links);
 
 window.addEventListener('popstate', event => {
+  console.log(event.state);
   updateContent(event.state);
 });
 
-const updateContent = (newState) => {
+const updateContent = newState => {
   content.innerHTML = newState;
-}
-
+};
 
 (function() {
   links.forEach(x => {
     x.addEventListener('click', eventHandler);
-  })
-})()
+  });
+})();
 
-
-history.replaceState({
-  header: 'header',
-  main: 'main'
-}, document.title, document.location.href);
+// Установим первое состояние роутера
+history.replaceState(
+  {
+    header: 'header',
+    main: 'main'
+  },
+  document.title,
+  document.location.href
+);
