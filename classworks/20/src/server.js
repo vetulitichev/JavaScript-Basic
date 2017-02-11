@@ -6,11 +6,20 @@ let server = http
     console.log(request.url);
     const url = request.url;
     let data;
+    // 0. favicon -> favicon.ico
+    // 1. url == '/' ->
+
+    // 2. img
     if (url === '/') {
       data = 'router';
     }
     if (url === '/') {
-      fs.readFile(`${data}.html`, (err, data) => {
+      // 1. router.html
+      fs.readFile(`router.html`, (err, data) => {
+        response.end(data);
+      });
+    } else if (url === '/280.jpg') {
+      fs.readFile(url.slice(1), (err, data) => {
         response.end(data);
       });
     } else {
