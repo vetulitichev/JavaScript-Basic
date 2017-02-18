@@ -5,27 +5,25 @@ let server = http
   .createServer((request, response) => {
     console.log(request.url);
     const url = request.url;
-    let data;
+
+    console.log(request.headers.cookie);
     // 0. favicon -> favicon.ico
     // 1. url == '/' ->
 
     // 2. img
-    if (url === '/') {
-      data = 'router';
-    }
+
     if (url === '/') {
       // 1. router.html
-      fs.readFile(`router.html`, (err, data) => {
+      fs.readFile('router.html', (err, data) => {
         response.end(data);
       });
     } else if (url === '/280.jpg') {
-      fs.readFile(url.slice(1), (err, data) => {
-        response.end(data);
-      });
+      // fs.readFile('280.jpg', (err, data) => {
+      //   response.end(data);
+      // });
+      fs.createReadStream('280.jpg').pipe(response);
     } else {
-      fs.readFile('router.js', (err, data) => {
-        response.end(data);
-      });
+      fs.createReadStream('router.js').pipe(response);
     }
   })
   .listen(3000, 'localhost', () => {

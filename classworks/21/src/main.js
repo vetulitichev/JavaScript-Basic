@@ -1,17 +1,17 @@
 let url = 'https://easycode-js.herokuapp.com/ollu/users';
 let url2 = 'https://easycode-js.herokuapp.com/test/users';
 
-// let sendRequest = url => {
-//   let xhr = new XMLHttpRequest();
-//   xhr.open('GET', url, true);
-//   xhr.send();
-//   xhr.onreadystatechange = () => {
-//     console.log(xhr.readyState);
-//     if (xhr.readyState === 4) {
-//       document.body.innerHTML += `<pre>${xhr.responseText}</pre> <hr />`;
-//     }
-//   };
-// };
+let sendRequest = url => {
+  let xhr = new XMLHttpRequest();
+  xhr.open('GET', url, true);
+  xhr.send();
+  xhr.onreadystatechange = () => {
+    console.log(xhr.readyState);
+    if (xhr.readyState === 4) {
+      document.body.innerHTML += `<pre>${xhr.responseText}</pre> <hr />`;
+    }
+  };
+};
 
 // sendRequest(url);
 // sendRequest(url2);
