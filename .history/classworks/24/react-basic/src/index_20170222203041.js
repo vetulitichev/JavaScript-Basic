@@ -1,0 +1,1 @@
+let PRIVET = 'PRIVET';
